@@ -13,7 +13,7 @@ def predict(age, sex, bmi, children, smoker, region):
         children=children,
         smoker=smoker,
         region=region)
-    dff = pd.DataFrame(data, index=range(0, 1))
+    dff = pd.DataFrame(data, index=[0])
     dmap = {'male': 0, 'female': 1}
     dff['sex'] = dff['sex'].map(dmap)
 

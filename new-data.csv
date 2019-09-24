@@ -1,0 +1,4 @@
+,Unnamed: 0,Unnamed: 0.1,age,bmi,charges,children,index,region,sex,smoker
+0,0.0,0.0,18,37.62,13157.56,3,0,northwest,male,no
+1,0.0,,45,23.37,23358.73,3,1,northwest,male,yes
+0,,,20,18.0,4435.55,5,2,southeast,male,no

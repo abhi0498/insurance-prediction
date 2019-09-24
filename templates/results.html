@@ -1,34 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+{% include 'user-navbar.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Predictions</title>
-</head>
-
-<body>
-    <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand" href="#">Insurance Amount Prediction</a>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <p>Given data:</p>
-                <div class="ml-4">
-                    <p> Age: {{f.age}}</p>
-                    <p> Sex: {{f.sex}}</p>
-                    <p> BMI: {{f.bmi}}</p>
-                    <p> No. of Children: {{f.children}}</p>
-                    <p> Smoker: {{f.smoker}}</p>
-                </div>
-                Predicted insurance amount= {{(f.y[0])}}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <p>Given data:</p>
+            <div class="ml-4">
+                <p> Age: {{f.age[0]}}</p>
+                <p> Sex: {{f.sex[0].capitalize()}}</p>
+                <p> BMI: {{f.bmi[0]}}</p>
+                <p> No. of Children: {{f.children[0]}}</p>
+                <p> Smoker: {{f.smoker[0].capitalize()}}</p>
             </div>
+            Predicted insurance amount= {{(f.charges[0])}}
         </div>
     </div>
-</body>
+</div>
 
-</html>
+{% include 'footer.html' %}
