@@ -64,7 +64,7 @@ def login():
     if request.method == 'GET':
         return render_template('login.html')
     else:
-        if request.form['UserId'] == 'admin' and request.form['Password'] == 'admin':
+        if request.form['UserId'] == 'admin' and request.form['Password'] == 'admin': #change this to check in  db
             return render_template('vis.html')
         else:
             return render_template('error.html')
